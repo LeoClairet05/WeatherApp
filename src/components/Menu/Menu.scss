@@ -1,0 +1,104 @@
+@import "../../style/responsive.scss";
+.hamburger{
+    background-color: transparent;
+    border:none;
+    margin-right: 2em;
+    width: fit-content;
+    align-self: flex-end;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.cross{
+    background-color: transparent;
+    border:none;
+    width: fit-content;
+    align-self: flex-end;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.menuContainer{
+    position: fixed;
+    display: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 10000!important;
+    
+    .menuBlock{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        background-color: #3F475B;
+        height: 100%;
+        padding-left: 1em;
+        padding-right: 2em;
+        padding-top: 2em;
+        transform: translate3d(100vw, 0, 0);
+        transition:1s;
+        #option1{
+            transform: translate3d(100vw, 0, 0);
+            transition:1s;
+        }
+        #option2{
+            transform: translate3d(100vw, 0, 0);
+            transition:1s;
+        }
+        #option3{
+            transform: translate3d(100vw, 0, 0);
+            transition:1s;
+        }
+        >.row{
+            flex-direction: row;
+            width: 100%;
+            >hr{
+                border: 1px solid white;
+                box-shadow: none;
+            }
+        }
+        >h1{
+            font-size: 36px;
+            color: white;
+            font-weight: normal;
+            margin: 0;
+        }
+        >ul{
+            list-style: none;
+            margin: 0;
+            padding:0;
+            >li{
+                a{
+                    text-decoration: none;
+                    font-size: 24px;
+                    color: #A7A7A7;
+                    font-weight: normal;
+                    margin: 0;
+                    transition: 0.5s;
+                    padding-top: 0.3em;
+                    width: fit-content;
+                    &:hover{
+                        transition: 0.5s;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+        }
+        @include sm{
+            width: 80%;
+        }
+        @include md{
+            width: 30%;
+        }
+        @include lg{
+            width: 30%;
+        }
+        @include xl{
+            width: 30%;
+        }
+    }
+}

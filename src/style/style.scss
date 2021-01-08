@@ -17,6 +17,94 @@ html,body{
     padding: 0;
     background-color: transparent;
 }
+header{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top:0;
+    left:0;
+    width: 100%;
+    padding-top: 1.5em;
+    padding-left: 1em;
+    justify-content: space-between;
+    .searchBox{
+        .search-box {
+            border: solid 2px white;
+            display: inline-block;
+            position: relative;
+            border-radius: 25px;
+            input[type="text"] {
+                font-size: 16px;
+                font-weight: normal;
+                color: rgb(241, 241, 241);
+                width: 25px;
+                height: 25px;
+                padding: 5px 5px 5px 10px;
+                border: none;
+                box-sizing: border-box;
+                background: transparent;
+                border-radius: 20px;
+                transition: width 800ms cubic-bezier(0.5, -0.5, 0.5, 0.5) 600ms;
+                &::placeholder{
+                    color:white;
+                    opacity: 0;
+                    transition: 0.8s;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+                &:focus {
+                    outline: none;
+                }
+                &:focus, &:not(:placeholder-shown) {
+                    width: 250px;
+                    background-color: rgba(0,0,0,0.1);
+                    transition: width 800ms cubic-bezier(0.5, -0.5, 0.5, 1.5);
+                    &::placeholder{
+                        opacity: 1;
+                        transition: 0.8s;
+                    }
+                    + span {
+                        bottom: 5px;
+                        right: 10px;
+                        transition: bottom 300ms ease-out 800ms, right 300ms ease-out 800ms;
+                    }
+                    + span:after {
+                        top: 0px;
+                        right: 7px;
+                        opacity: 1;
+                        transition: top 300ms ease-out 1100ms, right 300ms ease-out 1100ms, opacity 300ms ease 1100ms;
+                    }
+                }
+            }
+            span {
+                width: 15px;
+                height: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                bottom: -8px;
+                right: -11px;
+                transition: bottom 300ms ease-out 300ms, right 300ms ease-out 300ms;
+                &:before, &:after {
+                    content: '';
+                    height: 15px;
+                    border-left: solid 2px white;
+                    position: absolute;
+                    transform: rotate(-45deg);
+                }
+                &:after {
+                    transform: rotate(45deg);
+                    opacity: 0;
+                    top: -10px;
+                    right: -15px;
+                    transition: top 300ms ease-out, right 300ms ease-out, opacity 300ms ease-out;
+                }
+            }
+        }
+    }
+}
 .home{
     display: flex;
     flex-direction: column;
