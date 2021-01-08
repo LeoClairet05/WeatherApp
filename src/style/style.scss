@@ -17,6 +17,24 @@ html,body{
     padding: 0;
     background-color: transparent;
 }
+header{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    padding-top: 1.5em;
+    padding-left: 1em;
+    .searchBox{
+        .openBar{
+            width: fit-content;
+            background: transparent;
+            border:none;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
 .home{
     display: flex;
     flex-direction: column;
