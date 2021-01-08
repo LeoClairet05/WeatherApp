@@ -19,20 +19,15 @@ html,body{
 }
 header{
     position: absolute;
+    display: flex;
+    align-items: center;
     top:0;
     left:0;
     width: 100%;
     padding-top: 1.5em;
     padding-left: 1em;
+    justify-content: space-between;
     .searchBox{
-        // .openBar{
-        //     width: fit-content;
-        //     background: transparent;
-        //     border:none;
-        //     &:hover{
-        //         cursor: pointer;
-        //     }
-        // }
         .search-box {
             border: solid 2px white;
             display: inline-block;
@@ -54,6 +49,9 @@ header{
                     color:white;
                     opacity: 0;
                     transition: 0.8s;
+                }
+                &:hover{
+                    cursor: pointer;
                 }
                 &:focus {
                     outline: none;
