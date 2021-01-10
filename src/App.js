@@ -6,6 +6,7 @@ import MenuContent from './components/Menu/MenuContent';
 import MenuButton from "./components/Menu/MenuButton";
 import { useState } from 'react';
 import { MenuContext } from "./components/Menu/MenuContext";
+import Weather from "./scenes/Weather/Weather";
 
 function App() {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -23,7 +24,7 @@ function App() {
       </header>
 
       <Route path="/" Component={HomePage} />
-
+      <Route path="/weather" Component={Weather} />
     </MenuContext.Provider>
     </>
   );
