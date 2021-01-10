@@ -6,9 +6,9 @@ export default function MenuContent(){
             <h1>Menu</h1>
             <div className="row"><hr/></div>
             <ul>
-                <li id="option1"><a href="/">Menu option 1</a></li>
-                <li id="option2"><a href="/">Menu option 2</a></li>
-                <li id="option3"><a href="/">Menu option 3</a></li>
+                <li id="option1"><a href="/">Accueil</a></li>
+                <li id="option2"><a href="/">Favoris</a></li>
+                <li id="option3"><a href="/">Informations</a></li>
             </ul>
         </>
         

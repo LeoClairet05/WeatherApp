@@ -33,7 +33,7 @@ export default function MenuButton(){
     return(
 
         <>
-        {!menuOpened ? <button className="hamburger" onClick={()=>{animateMenu()}}><img src={ham} width="25" height="25"/> </button>: <button className="cross" onClick={()=>{animateMenu()}}><img src={cross} width="25" height="25"/></button>}
+        {!menuOpened ? <button className="hamburger" onClick={()=>{animateMenu()}}><img alt="Hamburger" src={ham} width="25" height="25"/> </button>: <button alt="Croix" className="cross" onClick={()=>{animateMenu()}}><img src={cross} width="25" height="25"/></button>}
         </>
 
     )
