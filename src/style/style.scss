@@ -2,6 +2,20 @@
 *{
     box-sizing: border-box;
 }
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+#root{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
 #cities{
     display: flex;
     width: 100%;
@@ -26,20 +40,54 @@
         }
     }
 }
-html,body{
+#weatherContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
+    justify-content: center;
     margin: 0;
     padding: 0;
-    background-color: transparent;
-    font-family: 'Roboto';
-}
-#root{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
+    background: linear-gradient(180deg, #57B8E1 0%, #DDF4F9 100%);
+    >h1{
+        font-size: 40px;
+        margin: 0;
+        color: white;
+        font-weight: normal;
+        margin-bottom: 0.5em;
+    }
+    >h2{
+        color:white;
+        font-size: 36px;
+        font-weight: normal;
+        margin: 0;
+    }
+    >h6{
+        color:white;
+        font-size: 20px;
+        font-weight: lighter;
+        margin-top: 0;
+    }
+    p{
+        color: white;
+        font-weight: lighter;
+        margin: 0;
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .ltlContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    hr{
+        width: 80%;
+        border:1px solid white;
+    }
 }
 header{
     position: absolute;
@@ -159,7 +207,7 @@ header{
         max-width: 90%;
         align-self: center;
     }
-    .microButton{
+    .animName{
         display: flex;
         align-self: center;
         width: fit-content;
@@ -173,3 +221,5 @@ header{
         }
     }
 }
+
+

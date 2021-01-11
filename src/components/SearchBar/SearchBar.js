@@ -12,7 +12,7 @@ export default function SearchBar(){
             }
             
             for(let i=0; i<res.suggestions.length; i++){
-                document.getElementById('cities').innerHTML += "<a href='/weather'>- "+res.suggestions[i].address.city+", "+res.suggestions[i].address.state+", "+res.suggestions[i].address.country+"</a>";
+                document.getElementById('cities').innerHTML += "<a href='/weather?city="+res.suggestions[i].address.city+"&zip="+res.suggestions[i].address.postalCode+"&countryCode="+res.suggestions[i].countryCode+"'>- "+res.suggestions[i].address.city+", "+res.suggestions[i].address.state+", "+res.suggestions[i].address.country+"</a>";
             }
             
         }catch(err){

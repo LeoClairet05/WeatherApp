@@ -7,8 +7,8 @@ export default function MenuContent(){
             <div className="row"><hr/></div>
             <ul>
                 <li id="option1"><a href="/">Accueil</a></li>
-                <li id="option2"><a href="/">Favoris</a></li>
-                <li id="option3"><a href="/">Informations</a></li>
+                <li id="option2"><a href="/favorites">Favoris</a></li>
+                <li id="option3"><a href="/infos">Informations</a></li>
             </ul>
         </>
         
