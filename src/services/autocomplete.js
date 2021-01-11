@@ -6,9 +6,10 @@ export async function autocomplete(city) {
       headers: {
         Accept: "*/*",
       }
-    })
+    }).then((res) => res.json())
+    .catch((e) => {console.log('Fetch error autocomplete: ' + e)});
      
-    return res.json();
+    return res;
 
 } 
 

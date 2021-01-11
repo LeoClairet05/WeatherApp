@@ -7,6 +7,8 @@ import MenuButton from "./components/Menu/MenuButton";
 import { useState } from 'react';
 import { MenuContext } from "./components/Menu/MenuContext";
 import Weather from "./scenes/Weather/Weather";
+import Favorites from "./scenes/Favorites/Favorites";
+import Informations from './scenes/Infos/Informations';
 
 function App() {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -25,6 +27,8 @@ function App() {
 
       <Route path="/" Component={HomePage} />
       <Route path="/weather" Component={Weather} />
+      <Route path="/favorites" Component={Favorites}/>
+      <Route path="/infos" Component={Informations}/>
     </MenuContext.Provider>
     </>
   );
